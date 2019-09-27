@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "data",
@@ -18,8 +20,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class RequestBean {
 
+	@ApiModelProperty(notes = "Data presention",name="data",required=true,value="Arrays of data.")
     @JsonProperty("data")
     private List<Datum> data = null;
+	
+	@ApiModelProperty(notes = "Success Records info",name="includeSuccessRecords",required=true,value="Include Success data.")
     @JsonProperty("includeSuccessRecords")
     private String includeSuccessRecords;
     @JsonIgnore

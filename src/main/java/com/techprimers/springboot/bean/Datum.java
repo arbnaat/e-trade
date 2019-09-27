@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "transactionId",
@@ -18,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class Datum {
 
+	@ApiModelProperty(notes = "Transaction Records info",name="transactionId",required=true,value="Transaction information")
     @JsonProperty("transactionId")
     private String transactionId;
     @JsonProperty("taxes")
@@ -35,6 +38,7 @@ public class Datum {
         this.transactionId = transactionId;
     }
 
+    @ApiModelProperty(notes = "Tax information",name="taxes",required=true,value="Arrays of taxes.")
     @JsonProperty("taxes")
     public List<Tax> getTaxes() {
         return taxes;
