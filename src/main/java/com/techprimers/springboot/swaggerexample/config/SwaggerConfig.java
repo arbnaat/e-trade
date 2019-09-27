@@ -30,14 +30,14 @@ public class SwaggerConfig {
     private ApiInfo metaInfo() {
 
         ApiInfo apiInfo = new ApiInfo(
-                "Spring Boot Swagger Example API",
-                "Spring Boot Swagger Example API for Youtube",
-                "1.0",
-                "Terms of Service",
-                new Contact("TechPrimers", "https://www.youtube.com/TechPrimers",
-                        "techprimerschannel@gmail.com"),
-                "Apache License Version 2.0",
-                "https://www.apache.org/licesen.html"
+                "E - Trade Swagger",
+                "Release TAX Import - Asynch",
+                "v_11",
+                "Documention",
+                new Contact("E Trade", "https://www.xyz.com/eTrade",
+                        "sample@gmail.com"),
+                "Teast Version 2.0",
+                "https://www.test.org/test.html"
         );
 
         return apiInfo;
